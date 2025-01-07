@@ -1,6 +1,15 @@
 @charset "UTF-8";
-/* header */
-/* footer */
-/* 탭 화면 */
-/* 스와이퍼 */
-/* 이미지 리스트  */
+/* variables */
+@font-face {
+  font-family: "PP-Regular";
+  src: url("/assets/fonts/PPAdoratorio-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PP-Medium";
+  src: url("/assets/fonts/PPAdoratorio-Medium.woff");
+  font-weight: 500;
+}
+/* colors */
+/* 임의의 컬러 */
+/* mixins */

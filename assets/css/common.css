@@ -1,4 +1,23 @@
-.inner {
-  max-width: 1440px;
-  margin: 0 auto;
+@charset "UTF-8";
+/* variables */
+@font-face {
+  font-family: "PP-Regular";
+  src: url("/assets/fonts/PPAdoratorio-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PP-Medium";
+  src: url("/assets/fonts/PPAdoratorio-Medium.woff");
+  font-weight: 500;
+}
+/* colors */
+/* 임의의 컬러 */
+/* mixins */
+.skip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
 }

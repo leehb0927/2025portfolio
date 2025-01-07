@@ -2,6 +2,16 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@font-face {
+    font-family: 'PP-Regular';
+    src: url('/assets/fonts/PPAdoratorio-Regular.woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'PP-Medium';
+    src: url('/assets/fonts/PPAdoratorio-Medium.woff');
+    font-weight: 500;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -19,8 +29,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 10px;
+	font-family: 'PP-Regular';
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -45,4 +55,16 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+button {
+    all: unset;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font: inherit;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
 }

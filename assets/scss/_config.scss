@@ -1,4 +1,17 @@
 /* variables */
+@font-face {
+    font-family: 'PP-Regular';
+    src: url('/assets/fonts/PPAdoratorio-Regular.woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'PP-Medium';
+    src: url('/assets/fonts/PPAdoratorio-Medium.woff');
+    font-weight: 500;
+}
+
+$font-pp: 'PP-Regular';
+$font-pp-Medium: 'PP-Medium';
 
 /* colors */
 //기본 컬러
@@ -8,6 +21,8 @@ $color-white-01: rgba($color-white, .1);
 $color-gray: #eee;/* 임의의 컬러 */
 
 $color-black: #000;
+$color-base-black: rgb(20, 20, 20);
+$color-base-white: rgb(230, 230, 230);
 $color-black-01: rgba($color-black, .1);
 
 /* mixins */
