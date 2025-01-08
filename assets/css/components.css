@@ -24,3 +24,6 @@ header .header-wrap h1 {
 header .header-wrap p, header .header-wrap a {
   font-family: "Geist-ExtraLight";
 }
+header .header-wrap .time {
+  font-variant-numeric: tabular-nums;
+}

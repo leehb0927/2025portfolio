@@ -68,7 +68,7 @@ section {
             background-color: $color-base-black;
             .title {
                 position: sticky;
-                top: 0;
+                top: 100px;
                 height: 155px;
                 h2 {
                     svg {
@@ -78,7 +78,7 @@ section {
             }
             .works-card {
                 position: sticky;
-                top: 155px;
+                top: 255px;
                 .works-title {
                     display: flex;
                     justify-content: space-between;

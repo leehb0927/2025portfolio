@@ -1,5 +1,20 @@
 window.onload = function() {
 
+    //현재시간 표기하기
+    const currentTime = document.querySelector('.header-wrap .time');
+    
+    function updateTime() {
+        const now = new Date(); // 현재 시간 객체 생성
+        const hours = String(now.getHours()).padStart(2, '0'); // 시
+        const minutes = String(now.getMinutes()).padStart(2, '0'); // 분
+        const seconds = String(now.getSeconds()).padStart(2, '0'); // 초
+    
+        // 시간 포맷: HH:MM:SS
+        currentTime.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
     //메인비주얼 스크롤
     var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
     var mainVisualImageBox = document.querySelector('.main-visual .visual-wrap .bg');

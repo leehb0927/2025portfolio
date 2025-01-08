@@ -19,5 +19,8 @@ header {
         p, a {
             font-family: $font-ExtraLight;
         }
+        .time {
+            font-variant-numeric: tabular-nums; //가변 폰트 폭 고정
+        }
     }
 }
