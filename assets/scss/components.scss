@@ -1,1 +1,23 @@
 @import 'config';
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    .header-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 2vw 0;
+        h1, p, a {
+            font-size: 1.5rem;
+            color: $color-base-white;
+        }
+        h1 {
+            line-height: 20px;
+        }
+        p, a {
+            font-family: $font-ExtraLight;
+        }
+    }
+}

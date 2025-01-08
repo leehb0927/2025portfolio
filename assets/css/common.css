@@ -1,15 +1,5 @@
 @charset "UTF-8";
 /* variables */
-@font-face {
-  font-family: "PP-Regular";
-  src: url("/assets/fonts/PPAdoratorio-Regular.woff");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PP-Medium";
-  src: url("/assets/fonts/PPAdoratorio-Medium.woff");
-  font-weight: 500;
-}
 /* colors */
 /* 임의의 컬러 */
 /* mixins */

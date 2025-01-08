@@ -1,17 +1,16 @@
 /* variables */
-@font-face {
-    font-family: 'PP-Regular';
-    src: url('/assets/fonts/PPAdoratorio-Regular.woff');
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'PP-Medium';
-    src: url('/assets/fonts/PPAdoratorio-Medium.woff');
-    font-weight: 500;
-}
 
-$font-pp: 'PP-Regular';
-$font-pp-Medium: 'PP-Medium';
+// $font-pp: 'PP-Regular';
+// $font-pp-Medium: 'PP-Medium';
+$font-Thin: 'Geist-Thin';
+$font-ExtraLight: 'Geist-ExtraLight';
+$font-Light: 'Geist-Light';
+$font-Regular: 'Geist-Regular';
+$font-Medium: 'Geist-Medium';
+$font-SemiBold: 'Geist-SemiBold';
+$font-Bold: 'Geist-Bold';
+$font-ExtraBold: 'Geist-ExtraBold';
+$font-Black: 'Geist-Black';
 
 /* colors */
 //기본 컬러

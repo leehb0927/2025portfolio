@@ -4,7 +4,56 @@ section {
     width: 100%;
 }
 .main-visual {
-    height: 100vh;
+    background-color: $color-base-black;
+    .visual-wrap {
+        height: 5000px;
+        h2 {
+            color: $color-base-white;
+            p {
+                display: flex;
+                gap: 0;
+            }
+            span {
+                display: inline-block;
+                font-family: $font-Bold;
+                font-size: 13vw;
+            }
+        }
+    }
+    .sticky-wrap {
+        position: sticky;
+        top: 0;
+        .visual-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            .bg {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                width: 90%;
+                height: 80vh;
+                border-radius: 24px;
+                overflow: hidden;
+                z-index: 1;
+                transition: .4s;
+                .img-wrap {
+                    width: 100vw;
+                    height: 100vh;
+                }
+                img {
+                    background-position: 50%;
+                    width: 100%;
+                    height: 100%;
+                    /* filter: blur(4px); */
+                }
+            }
+        }
+    }
 }
 .introduce {
     

@@ -1,15 +1,26 @@
 @charset "UTF-8";
 /* variables */
-@font-face {
-  font-family: "PP-Regular";
-  src: url("/assets/fonts/PPAdoratorio-Regular.woff");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PP-Medium";
-  src: url("/assets/fonts/PPAdoratorio-Medium.woff");
-  font-weight: 500;
-}
 /* colors */
 /* 임의의 컬러 */
 /* mixins */
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+}
+header .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 2vw 0;
+}
+header .header-wrap h1, header .header-wrap p, header .header-wrap a {
+  font-size: 1.5rem;
+  color: rgb(230, 230, 230);
+}
+header .header-wrap h1 {
+  line-height: 20px;
+}
+header .header-wrap p, header .header-wrap a {
+  font-family: "Geist-ExtraLight";
+}
