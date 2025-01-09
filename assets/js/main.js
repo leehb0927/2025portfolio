@@ -1,4 +1,5 @@
 window.onload = function() {
+    gsap.registerPlugin(ScrollTrigger);
 
     //현재시간 표기하기
     const currentTime = document.querySelector('.header-wrap .time');
@@ -44,7 +45,6 @@ window.onload = function() {
 
     function motionRender() {
         var bgRadiusValue = 24; //bg이미지 border-radius 초기값
-        var bgEndValue = 100; //bg 이미지 width, height 변경 값
 
         var bgStartValue = 0;
         var bgBluerValue = 10;
@@ -52,11 +52,11 @@ window.onload = function() {
         //초기값에서 엔드값으로 값이 커져야함
         //90 ~ 100 이 되는 식을 만들어야함
 
-        if (percent < 30) {
-            mainVisualImageBox.style.width = (90 + (percent / 30) * 10).toFixed(2) + '%';
-            mainVisualImageBox.style.height = (80 + (percent / 30) * 20).toFixed(2) + 'vh';
-            mainVisualImageBox.style.borderRadius = (bgRadiusValue - (percent / 30) * (bgRadiusValue - bgStartValue)).toFixed(2) + 'px';
-            mainVisualImage.style.filter = 'blur(' + (bgStartValue + (percent / 30) * (bgBluerValue - bgStartValue)).toFixed(2) + 'px)';
+        if (percent < 10) {
+            mainVisualImageBox.style.width = (90 + (percent / 10) * 10).toFixed(2) + '%';
+            mainVisualImageBox.style.height = (80 + (percent / 10) * 20).toFixed(2) + 'vh';
+            mainVisualImageBox.style.borderRadius = (bgRadiusValue - (percent / 10) * (bgRadiusValue - bgStartValue)).toFixed(2) + 'px';
+            mainVisualImage.style.filter = 'blur(' + (bgStartValue + (percent / 10) * (bgBluerValue - bgStartValue)).toFixed(2) + 'px)';
         } else {
             mainVisualImageBox.style.width = '100%';
             mainVisualImageBox.style.height = '100vh'
@@ -72,4 +72,18 @@ window.onload = function() {
     })
 
     init()
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: '25% bottom',
+            end: '90% top',
+            scrub: 1,
+            // markers: true
+        }
+    })
+    //h2 텍스트가 나타났다 사라짐
+    .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none'})
+    .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none', duration: 1})
+    .to('.main-visual .sticky-wrap h2',{opacity: 0, ease: 'none'})
 }

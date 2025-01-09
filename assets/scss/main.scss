@@ -6,7 +6,7 @@ section {
 .main-visual {
     background-color: $color-base-black;
     .visual-wrap {
-        height: 5000px;
+        height: 8000px;
         h2 {
             color: $color-base-white;
             p {
@@ -52,6 +52,14 @@ section {
                     /* filter: blur(4px); */
                 }
             }
+        }
+
+        h2 {
+            position: absolute;
+            top: 115px;
+            left: 2vw;
+            z-index: 2;
+            opacity: 0;
         }
     }
 }
