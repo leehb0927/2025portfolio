@@ -17,7 +17,7 @@ window.onload = function() {
     setInterval(updateTime, 1000);
 
     //메인비주얼 스크롤
-    var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
+    /* var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
     var mainVisualImageBox = document.querySelector('.main-visual .visual-wrap .bg');
     var mainVisualImage = document.querySelector('.main-visual .visual-wrap .bg img');
 
@@ -61,17 +61,28 @@ window.onload = function() {
             mainVisualImageBox.style.width = '100%';
             mainVisualImageBox.style.height = '100vh'
         }
-    }
+    } */
 
-    function init() {
+    /* function init() {
         mainScroll()
     }
 
     window.addEventListener('scroll', function() {
         mainScroll()
-    })
+    }) */
 
-    init()
+    /* init() */
+
+    
+    //메인 비주얼 배경 고정
+    ScrollTrigger.create({
+        trigger: '.main-visual .visual-wrap',
+        pin: '.main-visual .visual-wrap .bg',
+        start: 'top top',
+        end: 'bottom bottom',
+        // markers: true,
+    });
+
 
     gsap.timeline({
         scrollTrigger: {
