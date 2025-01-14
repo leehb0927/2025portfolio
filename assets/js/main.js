@@ -86,10 +86,10 @@ window.onload = function() {
     gsap.timeline({
         scrollTrigger: {
             trigger: '.main-visual .visual-wrap',
-            start: '23% bottom',
+            start: '21% bottom',
             end: '90% top',
             scrub: 1,
-            markers: true
+            // markers: true
         }
     })
     //h2 텍스트가 나타났다 사라짐
