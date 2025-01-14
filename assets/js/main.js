@@ -17,7 +17,7 @@ window.onload = function() {
     setInterval(updateTime, 1000);
 
     //메인비주얼 스크롤
-    /* var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
+    var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
     var mainVisualImageBox = document.querySelector('.main-visual .visual-wrap .bg');
     var mainVisualImage = document.querySelector('.main-visual .visual-wrap .bg img');
 
@@ -44,8 +44,6 @@ window.onload = function() {
     }
 
     function motionRender() {
-        var bgRadiusValue = 24; //bg이미지 border-radius 초기값
-
         var bgStartValue = 0;
         var bgBluerValue = 10;
 
@@ -53,44 +51,45 @@ window.onload = function() {
         //90 ~ 100 이 되는 식을 만들어야함
 
         if (percent < 10) {
-            mainVisualImageBox.style.width = (90 + (percent / 10) * 10).toFixed(2) + '%';
-            mainVisualImageBox.style.height = (80 + (percent / 10) * 20).toFixed(2) + 'vh';
-            mainVisualImageBox.style.borderRadius = (bgRadiusValue - (percent / 10) * (bgRadiusValue - bgStartValue)).toFixed(2) + 'px';
+            const p = percent / 10; // 0 ~ 1 비율 계산
+            const insetTop = 110 * (1 - p);
+            const insetSides = 8 * (1 - p);
+            const borderRadius = 25 * (1 - p);
+
+            mainVisualImage.style.clipPath = `inset(${insetTop}px ${insetSides}vw ${insetTop}px ${insetSides}vw round ${borderRadius}px)`;
             mainVisualImage.style.filter = 'blur(' + (bgStartValue + (percent / 10) * (bgBluerValue - bgStartValue)).toFixed(2) + 'px)';
         } else {
-            mainVisualImageBox.style.width = '100%';
-            mainVisualImageBox.style.height = '100vh'
+            mainVisualImage.style.clipPath = `inset(0 0 0 0 round 0)`;
         }
-    } */
+    }
 
-    /* function init() {
+    function init() {
         mainScroll()
     }
 
     window.addEventListener('scroll', function() {
         mainScroll()
-    }) */
+    })
 
-    /* init() */
+    init()
 
     
     //메인 비주얼 배경 고정
-    ScrollTrigger.create({
+    /* ScrollTrigger.create({
         trigger: '.main-visual .visual-wrap',
         pin: '.main-visual .visual-wrap .bg',
         start: 'top top',
         end: 'bottom bottom',
-        // markers: true,
-    });
+    }); */
 
 
     gsap.timeline({
         scrollTrigger: {
             trigger: '.main-visual .visual-wrap',
-            start: '25% bottom',
+            start: '23% bottom',
             end: '90% top',
             scrub: 1,
-            // markers: true
+            markers: true
         }
     })
     //h2 텍스트가 나타났다 사라짐

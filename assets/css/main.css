@@ -26,6 +26,7 @@ section {
   font-size: 13vw;
 }
 .main-visual .sticky-wrap {
+  position: sticky;
   top: 0;
 }
 .main-visual .sticky-wrap .visual-wrap {
@@ -49,13 +50,15 @@ section {
   height: 100vh;
 }
 .main-visual .sticky-wrap .visual-wrap .bg img {
-  background-position: 50%;
+  background-position: center;
   width: 100%;
   height: 100%;
   clip-path: inset(110px 8vw 110px 8vw round 25px);
+  transition: 0.4s;
   /* filter: blur(4px); */
 }
 .main-visual .sticky-wrap h2 {
+  position: absolute;
   top: 115px;
   left: 2vw;
   z-index: 2;
