@@ -23,7 +23,7 @@ section {
     .sticky-wrap {
         position: sticky;
         top: 0;
-        .visual-wrap {
+        .visual-inner {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -48,6 +48,20 @@ section {
                     clip-path: inset(110px 8vw 110px 8vw round 25px);
                     transition: .4s;
                     /* filter: blur(4px); */
+                }
+            }
+            .text {
+                position: relative;
+                z-index: 2;
+                p {
+                    font-family: 'Geist-Bold';
+                    font-size: 8rem;
+                    color: #fff;
+                }
+                span {
+                    font-family: 'SilkSerif-Italic';
+                    font-size: 8rem;
+                    color: #fff;
                 }
             }
         }
