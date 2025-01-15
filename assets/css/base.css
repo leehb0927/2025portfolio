@@ -47,36 +47,6 @@
   src: url("/assets/fonts/Geist-Black.woff2") format("woff2");
   font-weight: 900;
 }
-@font-face {
-  font-family: "PPmonu-Light";
-  src: url("/assets/fonts/PPMonumentExtended-Light.woff2") format("wpff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "PPmonu-LightItalic";
-  src: url("/assets/fonts/woff2/PPMonumentExtended-LightItalic.woff2") format("woff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "PPmonu-Regular";
-  src: url("/assets/fonts/woff2/PPMonumentExtended-Regular.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PPmonu-RegularItalic";
-  src: url("/assets/fonts/woff2/PPMonumentExtended-RegularItalic.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "PPmonu-Black";
-  src: url("/assets/fonts/woff2/PPMonumentExtended-Black.woff2") format("woff2");
-  font-weight: 900;
-}
-@font-face {
-  font-family: "PPmonu-BlackItalic";
-  src: url("/assets/fonts/woff2/PPMonumentExtended-BlackItalic.woff2") format("woff2");
-  font-weight: 900;
-}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

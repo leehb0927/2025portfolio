@@ -96,6 +96,7 @@ section {
   color: rgb(230, 230, 230);
 }
 .works .works-wrapper .inner .works-card .works-title .name {
+  width: 170px;
   font-size: 2rem;
 }
 .works .works-wrapper .inner .works-card .works-title .name sup {
@@ -103,8 +104,10 @@ section {
   vertical-align: top;
   margin-right: 5px;
   line-height: inherit;
+  font-variant-numeric: tabular-nums;
 }
 .works .works-wrapper .inner .works-card .works-title .skills {
+  width: 200px;
   font-size: 1.6rem;
 }
 .works .works-wrapper .inner .works-card .works-title .view, .works .works-wrapper .inner .works-card .works-title .github {
@@ -117,4 +120,16 @@ section {
 .works .works-wrapper .inner .works-card .works-bg img {
   width: 100%;
   height: 100%;
+}
+.works .works-wrapper .inner .works-card .desc {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.works .works-wrapper .inner .works-card .desc p {
+  color: #fff;
 }
