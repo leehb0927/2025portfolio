@@ -53,15 +53,20 @@ section {
             .text {
                 position: relative;
                 z-index: 2;
+                text-align: right;
                 p {
-                    font-family: 'Geist-Bold';
+                    font-family: $font-SemiBold;
                     font-size: 8rem;
-                    color: #fff;
+                    color: $color-white;
+                    &:nth-of-type(2) {
+                        margin-top: 14px;
+                        margin-right: -33px;
+                    }
                 }
                 span {
-                    font-family: 'SilkSerif-Italic';
+                    font-family: $font-SilkSerif-LightItalic;
                     font-size: 8rem;
-                    color: #fff;
+                    color: $color-white;
                 }
             }
         }
