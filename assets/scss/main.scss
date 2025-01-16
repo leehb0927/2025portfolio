@@ -29,6 +29,7 @@ section {
             justify-content: center;
             width: 100%;
             height: 100vh;
+            overflow: hidden;
             .bg {
                 position: absolute;
                 z-index: 1;
@@ -36,18 +37,19 @@ section {
                 height: 100vh;
                 overflow: hidden;
                 z-index: 1;
-                transition: .1s;
+                /* transition: .1s; */
                 .img-wrap {
                     width: 100vw;
                     height: 100vh;
+                    clip-path: inset(110px 8vw 110px 8vw round 25px);
+                    transition: .4s;
                 }
                 img {
                     background-position: center;
                     width: 100%;
                     height: 100%;
-                    clip-path: inset(110px 8vw 110px 8vw round 25px);
-                    transition: .4s;
-                    /* filter: blur(4px); */
+                    
+                    transform: translateX(100px) translateY(100px);
                 }
             }
             .text {
@@ -55,18 +57,56 @@ section {
                 z-index: 2;
                 text-align: right;
                 p {
-                    font-family: $font-SemiBold;
-                    font-size: 8rem;
-                    color: $color-white;
-                    &:nth-of-type(2) {
-                        margin-top: 14px;
-                        margin-right: -33px;
+                    span {
+                        font-family: $font-Medium;
+                        font-size: 4.5vw;
+                        color: $color-white;
+                        letter-spacing: -.3vw;
+                        filter: blur(10px);
+                        opacity: 0;
+                        transition: .6s;
+                        text-transform: uppercase;
+                        &.italic {
+                            font-family: $font-SilkSerif-LightItalic;
+                            font-size: 4.5vw;
+                            color: $color-white;
+                            text-transform: none;
+                        }
+                        &.on {
+                            filter: none;
+                            opacity: 1;
+                        }
+                    }
+                    &.second-line {
+                        &:nth-of-type(2) {
+                            margin-top: 14px;
+                            margin-right: -4vw;
+                        }
                     }
                 }
-                span {
-                    font-family: $font-SilkSerif-LightItalic;
-                    font-size: 8rem;
-                    color: $color-white;
+            }
+            .scroll-down {
+                position: absolute;
+                bottom: 12px;
+                left: 50%;
+                transform: translate(-50%);
+
+                opacity: 0;
+                    transition: .3s;
+                &::before {
+                    @include vs;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 16px;
+                    height: 23px;
+                    background-image: url('../image/scrollDownArrow.png');
+                    background-size: contain;
+                }
+                img {
+                    width: 80px;
+                    height: 80px;
+                    animation: spinAnimation 8s infinite linear;
                 }
             }
         }

@@ -18,7 +18,7 @@ window.onload = function() {
 
     //메인비주얼 스크롤
     var mainVScrollBody = document.querySelector('.main-visual .visual-wrap');
-    var mainVisualImageBox = document.querySelector('.main-visual .visual-wrap .bg');
+    var mainVisualImageWrap = document.querySelector('.main-visual .visual-wrap .bg .img-wrap');
     var mainVisualImage = document.querySelector('.main-visual .visual-wrap .bg img');
 
     var scrollHeight;
@@ -56,10 +56,10 @@ window.onload = function() {
             const insetSides = 8 * (1 - p);
             const borderRadius = 25 * (1 - p);
 
-            mainVisualImage.style.clipPath = `inset(${insetTop}px ${insetSides}vw ${insetTop}px ${insetSides}vw round ${borderRadius}px)`;
+            mainVisualImageWrap.style.clipPath = `inset(${insetTop}px ${insetSides}vw ${insetTop}px ${insetSides}vw round ${borderRadius}px)`;
             mainVisualImage.style.filter = 'blur(' + (bgStartValue + (percent / 10) * (bgBluerValue - bgStartValue)).toFixed(2) + 'px)';
         } else {
-            mainVisualImage.style.clipPath = `inset(0 0 0 0 round 0)`;
+            mainVisualImageWrap.style.clipPath = `inset(0 0 0 0 round 0)`;
         }
     }
 
@@ -82,16 +82,53 @@ window.onload = function() {
         end: 'bottom bottom',
     }); */
 
+    var loading = gsap.timeline({});
+    var mainVisualSpans = document.querySelectorAll('.main-visual .visual-wrap .visual-inner .text .first-line span');
+    var mainVisualSpans2 = document.querySelectorAll('.main-visual .visual-wrap .visual-inner .text .second-line span');
+
+    //글자(span)에 랜덤으로 On 클래스 추가하는 함수
+    function addOnSpans(spans) {
+        spans.forEach(span => {
+            gsap.to(span, {
+                delay: Math.random(),
+                onStart: () => {
+                    span.classList.add('on');
+                }
+            })
+        })
+    }
+
+    loading
+    .to('.main-visual .visual-wrap .bg img' , {x: 0, y:0, ease: 'none', duration: .4}, 0)
+    .to(mainVisualSpans, {
+        stagger: {
+          from: "random", // 애니메이션 순서를 랜덤하게
+        },
+        //onStart : 애니메이션이 시작될 때 호출되는 함수
+        //addOnSpans함수를 호출한다 매개변수로는 mainVisualSpans를 받는다.
+        onStart: () => addOnSpans(mainVisualSpans)
+        }, 0)
+    .to(mainVisualSpans2, {
+        stagger: {
+            from: "random",
+        },
+        onStart: () => addOnSpans(mainVisualSpans2),
+        delay: .5
+        })
+    .to('.scroll-down', {opacity: 1, delay: .5})
 
     gsap.timeline({
         scrollTrigger: {
             trigger: '.main-visual .visual-wrap',
-            start: '21% bottom',
+            start: 'top top',
             end: '90% top',
             scrub: 1,
             // markers: true
         }
     })
+    //메인비주얼 span이 옆으로 사라짐
+    .to('.main-visual .visual-wrap .first-line', {x: '-200%'}, 0)
+    .to('.main-visual .visual-wrap .second-line', {x: '200%'}, 0)
     //h2 텍스트가 나타났다 사라짐
     .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none'})
     .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none', duration: 1})

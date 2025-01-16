@@ -92,3 +92,17 @@ $color-black-01: rgba($color-black, .1);
     align-items: center;
     justify-content: center;
 }
+
+
+/* animation */
+@keyframes spinAnimation {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
