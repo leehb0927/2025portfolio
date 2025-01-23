@@ -92,7 +92,7 @@ section {
                 transform: translate(-50%);
 
                 opacity: 0;
-                    transition: .3s;
+                transition: .3s;
                 &::before {
                     @include vs;
                     top: 50%;
