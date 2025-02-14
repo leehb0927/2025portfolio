@@ -112,25 +112,63 @@ window.onload = function() {
         stagger: {
             from: "random",
         },
-        onStart: () => addOnSpans(mainVisualSpans2),
+        onStart: () => addOnSpans(mainVisualSpans2), 
         delay: .5
         })
     .to('.scroll-down', {opacity: 1, delay: .5})
 
+    //메인비주얼 gsap
     gsap.timeline({
         scrollTrigger: {
             trigger: '.main-visual .visual-wrap',
             start: 'top top',
-            end: '90% top',
+            end: `${800 + window.innerHeight}px bottom`,
             scrub: 1,
-            // markers: true
         }
     })
     //메인비주얼 span이 옆으로 사라짐
     .to('.main-visual .visual-wrap .first-line', {x: '-200%'}, 0)
     .to('.main-visual .visual-wrap .second-line', {x: '200%'}, 0)
-    //h2 텍스트가 나타났다 사라짐
-    .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none'})
-    .to('.main-visual .sticky-wrap h2',{opacity: 1, ease: 'none', duration: 1})
-    .to('.main-visual .sticky-wrap h2',{opacity: 0, ease: 'none'})
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: `${800 + window.innerHeight}px bottom`,
+            end: `${1800 + window.innerHeight}px bottom`,
+            scrub: 1,
+        }
+    })
+    .to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 1})
+    .to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 0,  delay: .3})
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: `${2200 + window.innerHeight}px bottom`,
+            end: `${2700 + window.innerHeight}px bottom`,
+            scrub: 1,
+        }
+    })
+    .to('.main-visual .visual-wrap .intro-wrap.wrap2', {opacity: 1})
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: `${2700 + window.innerHeight}px bottom`,
+            end: `${3000 + window.innerHeight}px bottom`,
+            scrub: 1,
+        }
+    })
+    .to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions' ,{marginLeft: '6vw'})
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: `${3500 + window.innerHeight}px bottom`,
+            end: `${3700 + window.innerHeight}px bottom`,
+            scrub: 1,
+        }
+    })
+    .to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1})
+
 }

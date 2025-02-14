@@ -6,7 +6,7 @@ section {
 .main-visual {
     background-color: $color-base-black;
     .visual-wrap {
-        height: 8000px;
+        height: 7000px;
         h2 {
             color: $color-base-white;
             p {
@@ -67,8 +67,8 @@ section {
                         transition: .6s;
                         text-transform: uppercase;
                         &.italic {
-                            font-family: $font-SilkSerif-LightItalic;
-                            font-size: 4.5vw;
+                            font-family: $font-Whisper;
+                            font-size: 6vw;
                             color: $color-white;
                             text-transform: none;
                         }
@@ -85,6 +85,65 @@ section {
                     }
                 }
             }
+
+            .intro-wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+
+                opacity: 0;
+                z-index: 2;
+                p, span {
+                    color: $color-white;
+                }
+                .intro-eng, .intro-ko {
+                    padding-left: 2vw;
+                }
+                .intro-eng {
+                    padding-top: 15vh;
+                    font-size: 3.5vw;
+                    line-height: 4.5vw;
+                    height: 50px;
+                    span {
+                        display: inline-block;
+                        font-family: $font-Whisper;
+                        font-size: 6vw;
+                        &.interactions {
+                            position: relative;
+                            font-family: $font-Regular;
+                            font-size: 3.5vw;
+                            line-height: 4.5vw;
+                            height: 50px;
+                            /* margin-left: 6vw; */
+                            .icon {
+                                position: absolute;
+                                width: 3vw;
+                                height: 3vw;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: -4.5vw;
+                                background-image: url('../image/star.png');
+                                background-size: contain;
+
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                .intro-ko {
+                    font-family: $font-Pretendard-ExtraLight;
+                    padding-bottom: 15vh;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+            }
+
+
+
             .scroll-down {
                 position: absolute;
                 bottom: 12px;
