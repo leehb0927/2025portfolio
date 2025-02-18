@@ -171,4 +171,34 @@ window.onload = function() {
     })
     .to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1})
 
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.main-visual .visual-wrap',
+            start: `${4000 + window.innerHeight}px bottom`,
+            end: `${5500 + window.innerHeight}px bottom`,
+            scrub: 1,
+            // markers: true
+        }
+    })
+    .to('.main-visual .visual-wrap .work-history .inner', {height: '100vh'}, 0)
+    .to('.main-visual .visual-wrap .intro-wrap.wrap2 .inner.top' ,{y: '-50vh' , opacity: 0}, 0)
+    .to('.main-visual .visual-wrap .intro-wrap.wrap2 .inner.bottom' ,{y: '50vh', opacity: 0}, 0)
+    .to('.main-visual .visual-wrap .work-history .horizontal-wrap', {opacity: 1})
+
+    let workList = gsap.utils.toArray('.main-visual .visual-wrap .work-history .horizontal-wrap ul li');
+
+
+    gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
+        xPercent: -100 * (workList.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+            trigger: ".work-history",  // .work-history가 스크롤 트리거가 되는 요소
+            pin: true,  // 요소를 스크롤하면서 고정
+            scrub: 1,  // 부드러운 스크롤 효과
+            start: `${5500 + window.innerHeight}px bottom`,
+            end: '900% bottom',
+            markers: true
+        }
+    });
 }

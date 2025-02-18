@@ -128,6 +128,21 @@
   font-weight: 200;
 }
 @font-face {
+  font-family: "Pretendard-Light";
+  src: url("../fonts/Pretendard/Pretendard-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("../fonts/Pretendard/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("../fonts/Pretendard/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
   font-family: "Wagon-Bold";
   src: url("../fonts/Wagon-Bold.otf");
 }

@@ -152,6 +152,98 @@ section {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.main-visual .sticky-wrap .visual-inner .intro-wrap.wrap2 .inner {
+  height: 50vh;
+}
+.main-visual .sticky-wrap .visual-inner .intro-wrap.wrap2 .inner .intro-ko {
+  padding: 0;
+}
+.main-visual .sticky-wrap .visual-inner .intro-wrap.wrap2 .inner.bottom {
+  position: relative;
+}
+.main-visual .sticky-wrap .visual-inner .intro-wrap.wrap2 .inner.bottom .intro-ko {
+  position: absolute;
+  left: 2vw;
+  bottom: 15vh;
+}
+.main-visual .sticky-wrap .visual-inner .work-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .inner {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  background-color: rgb(20, 20, 20);
+  overflow: hidden;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(20, 20, 20);
+  opacity: 0;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap {
+  padding-left: 8vw;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap h2 {
+  font-size: 13rem;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap p {
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: rgb(230, 230, 230);
+  margin-top: 30vh;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list {
+  display: flex;
+  align-items: start;
+  gap: 150px;
+  padding-left: 30vw;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company, .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc h3, .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc p {
+  color: rgb(230, 230, 230);
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company {
+  display: block;
+  margin-top: 24px;
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.2rem;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc h3 {
+  margin-top: 8px;
+  font-family: "Pretendard-Bold";
+  font-size: 3rem;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc p {
+  margin-top: 24px;
+  font-family: "Pretendard-Light";
+  font-size: 1.5rem;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.museuml .thumb-wrap {
+  width: 720px;
+  height: 420px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.unitsoft .thumb-wrap {
+  width: 512px;
+  height: 290px;
+}
 .main-visual .sticky-wrap .visual-inner .scroll-down {
   position: absolute;
   bottom: 12px;
@@ -178,13 +270,6 @@ section {
   width: 80px;
   height: 80px;
   animation: spinAnimation 8s infinite linear;
-}
-.main-visual .sticky-wrap h2 {
-  position: absolute;
-  top: 115px;
-  left: 2vw;
-  z-index: 2;
-  opacity: 0;
 }
 
 /* works */
