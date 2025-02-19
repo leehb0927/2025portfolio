@@ -199,7 +199,7 @@ section {
                     .works-list {
                         display: flex;
                         align-items: start;
-                        gap: 150px;
+                        gap: 200px;
                         padding-left: 30vw;
                         li {
                             .thumb-wrap {
@@ -241,6 +241,36 @@ section {
                                 .thumb-wrap {
                                     width: 512px;
                                     height: 290px;
+                                }
+                            }
+                            &.lghv-home {
+                                .thumb-wrap {
+                                    width: 535px;
+                                    height: 420px;
+                                }
+                            }
+                            &.lgu-home {
+                                .thumb-wrap {
+                                    width: 535px;
+                                    height: 250px;
+                                }
+                            }
+                            &.kt {
+                                .thumb-wrap {
+                                    width: 430px;
+                                    height: 350px;
+                                }
+                            }
+                            &.commerce-m {
+                                .thumb-wrap {
+                                    width: 240px;
+                                    height: 420px;
+                                }
+                            }
+                            &.commerce-tv {
+                                .thumb-wrap {
+                                    width: 650px;
+                                    height: 310px;
                                 }
                             }
                         }

@@ -193,6 +193,5 @@ gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
         scrub: 1,
         start: `${5500 + window.innerHeight}px bottom`,
         end: `${9000 + window.innerHeight}px bottom`,
-        markers: true,
     }
 });

@@ -208,7 +208,7 @@ section {
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list {
   display: flex;
   align-items: start;
-  gap: 150px;
+  gap: 200px;
   padding-left: 30vw;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap img {
@@ -243,6 +243,26 @@ section {
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.unitsoft .thumb-wrap {
   width: 512px;
   height: 290px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lghv-home .thumb-wrap {
+  width: 535px;
+  height: 420px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lgu-home .thumb-wrap {
+  width: 535px;
+  height: 250px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.kt .thumb-wrap {
+  width: 430px;
+  height: 350px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-m .thumb-wrap {
+  width: 240px;
+  height: 420px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap {
+  width: 650px;
+  height: 310px;
 }
 .main-visual .sticky-wrap .visual-inner .scroll-down {
   position: absolute;
