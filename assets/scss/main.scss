@@ -263,14 +263,17 @@ section {
                             }
                             &.commerce-m {
                                 .thumb-wrap {
-                                    width: 240px;
-                                    height: 420px;
+                                    width: 280px;
+                                    height: 425px;
                                 }
                             }
                             &.commerce-tv {
                                 .thumb-wrap {
                                     width: 650px;
                                     height: 310px;
+                                    img {
+                                        object-position:top ;
+                                    }
                                 }
                             }
                         }

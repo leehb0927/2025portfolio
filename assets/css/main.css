@@ -257,12 +257,15 @@ section {
   height: 350px;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-m .thumb-wrap {
-  width: 240px;
-  height: 420px;
+  width: 280px;
+  height: 425px;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap {
   width: 650px;
   height: 310px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap img {
+  object-position: top;
 }
 .main-visual .sticky-wrap .visual-inner .scroll-down {
   position: absolute;
