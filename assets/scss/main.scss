@@ -191,7 +191,7 @@ section {
                         p {
                             font-family: $font-Pretendard-ExtraLight;
                             font-size: 1.5rem;
-                            line-height: 2rem;
+                            line-height: 2.2rem;
                             color: $color-base-white;
                             margin-top: 30vh;
                         }
@@ -229,6 +229,7 @@ section {
                                     margin-top: 24px;
                                     font-family: $font-Pretendard-Light;
                                     font-size: 1.5rem;
+                                    line-height: 2.3rem;
                                 }
                             }
                             &.museuml {
@@ -275,6 +276,68 @@ section {
                                         object-position:top ;
                                     }
                                 }
+                            }
+                        }
+                    }
+                    .view-more {
+                        position: relative;
+                        width: 55vw;
+                        padding-left: 13vw;
+                        h2 {
+                            font-size: 10rem;
+                        }
+                        p {
+                            font-family: $font-Pretendard-ExtraLight;
+                            font-size: 1.5rem;
+                            color: $color-base-white;
+                            margin-top: 30vh;
+                        }
+                        .view-link {
+                            position: absolute;
+                            bottom: 5vh;
+                            right: 16vw;
+                            width: 216px;
+                            height: 216px;
+                            &:hover {
+                                &::after {
+                                    opacity: 0;
+                                }
+                                span {
+                                    opacity: 1;
+                                }
+                            }
+                            &::after {
+                                @include vs;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) rotate(0);
+                                width: 57px;
+                                height: 17px;
+                                background-image: url('../image/arrow.png');
+                                background-size: contain;
+                                transition: .3s;
+                                cursor: pointer
+                            }
+                            > a {
+                                display: inline-block;
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                background-image: url('../image/viewMoreBtn.png');
+                                background-size: contain;
+                                z-index: 1;
+                            }
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                font-family: $font-Pretendard-ExtraLight;
+                                font-size: 1.5rem;
+                                color: $color-base-white;
+                                opacity: 0;
+                                transition: .6s;
+                                cursor: pointer
                             }
                         }
                     }

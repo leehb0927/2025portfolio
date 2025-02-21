@@ -201,7 +201,7 @@ section {
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap p {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
   color: rgb(230, 230, 230);
   margin-top: 30vh;
 }
@@ -235,6 +235,7 @@ section {
   margin-top: 24px;
   font-family: "Pretendard-Light";
   font-size: 1.5rem;
+  line-height: 2.3rem;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.museuml .thumb-wrap {
   width: 720px;
@@ -266,6 +267,70 @@ section {
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap img {
   object-position: top;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more {
+  position: relative;
+  width: 55vw;
+  padding-left: 13vw;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more h2 {
+  font-size: 10rem;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more p {
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.5rem;
+  color: rgb(230, 230, 230);
+  margin-top: 30vh;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link {
+  position: absolute;
+  bottom: 5vh;
+  right: 16vw;
+  width: 216px;
+  height: 216px;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link:hover::after {
+  opacity: 0;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link:hover span {
+  opacity: 1;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 0;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 57px;
+  height: 17px;
+  background-image: url("../image/arrow.png");
+  background-size: contain;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link > a {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/viewMoreBtn.png");
+  background-size: contain;
+  z-index: 1;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.5rem;
+  color: rgb(230, 230, 230);
+  opacity: 0;
+  transition: 0.6s;
+  cursor: pointer;
 }
 .main-visual .sticky-wrap .visual-inner .scroll-down {
   position: absolute;

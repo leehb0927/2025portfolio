@@ -185,7 +185,10 @@ gsap.timeline({
 .to('.main-visual .visual-wrap .intro-wrap.wrap2 .inner.bottom' ,{y: '50vh', opacity: 0}, 0)
 .to('.main-visual .visual-wrap .work-history .horizontal-wrap', {opacity: 1})
 
-gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
+
+
+//works 가로스크롤 페이지
+let worksScrollTween = gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
     xPercent: -80, // .horizontal-wrap의 길이만큼 이동
     ease: 'none',
     scrollTrigger: {
@@ -195,3 +198,15 @@ gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
         end: `${9000 + window.innerHeight}px bottom`,
     }
 });
+
+//works가로스크롤 페이지 view-more 버튼 돌아가게
+gsap.to('.work-history .view-link > a', {
+    rotation: 90,
+    scrollTrigger: {
+        trigger: '.work-history .view-more',
+        containerAnimation: worksScrollTween,
+        start: '60% bottom',
+        end: 'bottom bottom',
+        scrub: 1
+    }
+})
