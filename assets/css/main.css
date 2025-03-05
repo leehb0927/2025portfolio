@@ -361,9 +361,6 @@ section {
 }
 
 /* works */
-.works .works-wrapper {
-  height: 1800px;
-}
 .works .works-wrapper .inner {
   background-color: rgb(20, 20, 20);
 }
