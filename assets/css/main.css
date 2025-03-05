@@ -415,6 +415,12 @@ section {
 .works .works-wrapper .inner .works-card .works-bg img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.works .works-wrapper .inner .works-card .works-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .works .works-wrapper .inner .works-card .desc {
   position: absolute;
