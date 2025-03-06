@@ -366,8 +366,13 @@ section {
 }
 .works .works-wrapper .inner .title {
   position: sticky;
-  top: 100px;
-  height: 155px;
+  top: 0;
+  height: 255px;
+  background-color: rgb(20, 20, 20);
+  z-index: 99;
+}
+.works .works-wrapper .inner .title h2 {
+  padding-top: 100px;
 }
 .works .works-wrapper .inner .title h2 svg {
   fill: rgb(230, 230, 230);

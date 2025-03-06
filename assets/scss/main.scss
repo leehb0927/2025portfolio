@@ -382,9 +382,12 @@ section {
             background-color: $color-base-black;
             .title {
                 position: sticky;
-                top: 100px;
-                height: 155px;
+                top: 0;
+                height: 255px;
+                background-color: $color-base-black;
+                z-index: 99;
                 h2 {
+                    padding-top: 100px;
                     svg {
                         fill: $color-base-white;
                     }
