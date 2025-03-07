@@ -1,7 +1,5 @@
-@charset "UTF-8";
 /* variables */
 /* colors */
-/* 임의의 컬러 */
 /* mixins */
 /* animation */
 @keyframes spinAnimation {
@@ -20,13 +18,10 @@ section {
 }
 
 .main-visual {
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
 }
 .main-visual .visual-wrap {
   height: 10000px;
-}
-.main-visual .visual-wrap h2 {
-  color: rgb(230, 230, 230);
 }
 .main-visual .visual-wrap h2 p {
   display: flex;
@@ -181,7 +176,7 @@ section {
   position: relative;
   width: 100%;
   /* height: 100vh; */
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
   overflow: hidden;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap {
@@ -189,7 +184,7 @@ section {
   display: flex;
   align-items: center;
   height: 100%;
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
   opacity: 0;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap {
@@ -202,7 +197,6 @@ section {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.5rem;
   line-height: 2.2rem;
-  color: rgb(230, 230, 230);
   margin-top: 30vh;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list {
@@ -216,9 +210,6 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company, .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc h3, .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc p {
-  color: rgb(230, 230, 230);
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company {
   display: block;
@@ -279,7 +270,6 @@ section {
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more p {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.5rem;
-  color: rgb(230, 230, 230);
   margin-top: 30vh;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link {
@@ -327,7 +317,6 @@ section {
   transform: translate(-50%, -50%);
   font-family: "Pretendard-ExtraLight";
   font-size: 1.5rem;
-  color: rgb(230, 230, 230);
   opacity: 0;
   transition: 0.6s;
   cursor: pointer;
@@ -362,20 +351,20 @@ section {
 
 /* works */
 .works .works-wrapper .inner {
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
 }
 .works .works-wrapper .inner .title {
   position: sticky;
   top: 0;
   height: 255px;
-  background-color: rgb(20, 20, 20);
+  background-color: #141414;
   z-index: 99;
 }
 .works .works-wrapper .inner .title h2 {
   padding-top: 100px;
 }
 .works .works-wrapper .inner .title h2 svg {
-  fill: rgb(230, 230, 230);
+  fill: #e6e6e6;
 }
 .works .works-wrapper .inner .works-card {
   position: sticky;
@@ -386,11 +375,8 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 4px 2vw;
-  border-top: 1px solid rgb(230, 230, 230);
-  background-color: rgb(20, 20, 20);
-}
-.works .works-wrapper .inner .works-card .works-title p, .works .works-wrapper .inner .works-card .works-title a {
-  color: rgb(230, 230, 230);
+  border-top: 1px solid #e6e6e6;
+  background-color: #141414;
 }
 .works .works-wrapper .inner .works-card .works-title .name {
   width: 170px;
@@ -435,4 +421,60 @@ section {
 }
 .works .works-wrapper .inner .works-card .desc p {
   color: #fff;
+}
+
+/* learning */
+.learning {
+  background-color: #141414;
+}
+.learning .inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 180px;
+  padding-bottom: 220px;
+  padding-left: 5vw;
+}
+.learning .inner .title-wrap h2 {
+  font-size: 3rem;
+}
+.learning .inner .title-wrap .eng {
+  margin-top: 50px;
+  font-family: "Pretendard-ExtraLight";
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: #a2a2a2;
+}
+.learning .inner .title-wrap .ko {
+  margin-top: 40px;
+  font-family: "Pretendard-Thin";
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #a2a2a2;
+}
+.learning .inner .learning-list {
+  width: 55vw;
+}
+.learning .inner .learning-list .list {
+  margin-top: 75px;
+}
+.learning .inner .learning-list .list li {
+  display: flex;
+  align-items: center;
+  padding-left: 3vw;
+  height: 150px;
+  box-sizing: border-box;
+}
+.learning .inner .learning-list .list li.line {
+  height: 1px;
+  background-color: #e6e6e6;
+}
+.learning .inner .learning-list .list li h3 {
+  width: 50%;
+  font-size: 2.2rem;
+}
+.learning .inner .learning-list .list li .desc {
+  font-family: "Pretendard-Thin";
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  color: #a2a2a2;
 }

@@ -8,7 +8,6 @@ section {
     .visual-wrap {
         height: 10000px;
         h2 {
-            color: $color-base-white;
             p {
                 display: flex;
                 gap: 0;
@@ -192,7 +191,6 @@ section {
                             font-family: $font-Pretendard-ExtraLight;
                             font-size: 1.5rem;
                             line-height: 2.2rem;
-                            color: $color-base-white;
                             margin-top: 30vh;
                         }
                     }
@@ -211,9 +209,6 @@ section {
                                 }
                             }
                             .desc {
-                                .company, h3, p {
-                                    color: $color-base-white;
-                                }
                                 .company {
                                     display: block;
                                     margin-top: 24px;
@@ -289,7 +284,6 @@ section {
                         p {
                             font-family: $font-Pretendard-ExtraLight;
                             font-size: 1.5rem;
-                            color: $color-base-white;
                             margin-top: 30vh;
                         }
                         .view-link {
@@ -334,7 +328,6 @@ section {
                                 transform: translate(-50%, -50%);
                                 font-family: $font-Pretendard-ExtraLight;
                                 font-size: 1.5rem;
-                                color: $color-base-white;
                                 opacity: 0;
                                 transition: .6s;
                                 cursor: pointer
@@ -403,9 +396,6 @@ section {
                     padding: 4px 2vw;
                     border-top: 1px solid $color-base-white;
                     background-color: $color-base-black;
-                    p,a {
-                        color: $color-base-white;
-                    }
                     .name {
                         width: 170px;
                         font-size: 2rem;
@@ -449,6 +439,66 @@ section {
                     -webkit-backdrop-filter: blur(6px);
                     p {
                         color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* learning */
+.learning {
+    background-color: $color-base-black;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 180px;
+        padding-bottom: 220px;
+        padding-left: 5vw;
+        .title-wrap {
+            h2 {
+                font-size: 3rem;
+            }
+            .eng {
+                margin-top: 50px;
+                font-family: $font-Pretendard-ExtraLight;
+                font-size: 2rem;
+                line-height: 2.8rem;
+                color: $color-gray;
+            }
+            .ko {
+                margin-top: 40px;
+                font-family: $font-Pretendard-Thin;
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                color: $color-gray;
+            }
+        }
+        .learning-list {
+            width: 55vw;
+            .list {
+                margin-top: 75px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 3vw;
+                    height: 150px;
+                    box-sizing: border-box;
+                    &.line {
+                        height: 1px;
+                        background-color: $color-base-white;
+                    }
+                    h3 {
+                        width: 50%;
+                        font-size: 2.2rem;
+                        
+                    }
+                    .desc {
+                        font-family: $font-Pretendard-Thin;
+                        font-size: 1.2rem;
+                        line-height: 2.3rem;
+                        color: $color-gray;
                     }
                 }
             }

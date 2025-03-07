@@ -1,7 +1,5 @@
-@charset "UTF-8";
 /* variables */
 /* colors */
-/* 임의의 컬러 */
 /* mixins */
 /* animation */
 @keyframes spinAnimation {
@@ -28,7 +26,6 @@ header .header-wrap {
 }
 header .header-wrap h1, header .header-wrap p, header .header-wrap a {
   font-size: 1.5rem;
-  color: rgb(230, 230, 230);
 }
 header .header-wrap h1 {
   line-height: 20px;
