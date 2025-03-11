@@ -465,6 +465,8 @@ section {
   box-sizing: border-box;
 }
 .learning .inner .learning-list .list li.line {
+  padding: 0;
+  width: 0;
   height: 1px;
   background-color: #e6e6e6;
 }

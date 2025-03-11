@@ -486,6 +486,8 @@ section {
                     height: 150px;
                     box-sizing: border-box;
                     &.line {
+                        padding: 0;
+                        width: 0;
                         height: 1px;
                         background-color: $color-base-white;
                     }

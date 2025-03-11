@@ -73,7 +73,17 @@ window.addEventListener('scroll', function() {
 init()
 
 
-//메인 비주얼 배경 고정
+
+
+
+
+
+
+
+
+
+/* 메인비주얼 */
+//처음 배경 고정
 /* ScrollTrigger.create({
     trigger: '.main-visual .visual-wrap',
     pin: '.main-visual .visual-wrap .bg',
@@ -115,6 +125,20 @@ loading
     delay: .5
     })
 .to('.scroll-down', {opacity: 1, delay: .5})
+
+//스크롤 내리면 scroll-down 사라졌다 스크롤 올리면 다시 나타남
+//gsap로 안되서 스크립트
+const scrollDown = document.querySelector('.scroll-down');
+
+function scrollDownHandle() {
+    if(window.scrollY > 200) {
+        scrollDown.style.opacity = "0";
+    }else {
+        scrollDown.style.opacity = "1";
+    }
+}
+
+window.addEventListener("scroll", scrollDownHandle);
 
 //메인비주얼 gsap
 gsap.timeline({
@@ -187,6 +211,14 @@ gsap.timeline({
 
 
 
+
+
+
+
+
+
+
+/* works */
 //works 가로스크롤 페이지
 let worksScrollTween = gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
     xPercent: -80, // .horizontal-wrap의 길이만큼 이동
@@ -210,3 +242,29 @@ gsap.to('.work-history .view-link > a', {
         scrub: 1
     }
 })
+
+
+
+
+
+
+
+
+
+
+/* learning & tech stack */
+//리스트 line 하나씩 나타나기
+
+gsap.utils.toArray('.learning .list .line').forEach(
+    (lines, index) => {
+        gsap.to(lines, {
+            scrollTrigger: {
+                trigger: '.learning',
+                start: 'top top',
+                markers: true
+            },
+            width: '100%',
+            delay: (index + 1) * .06
+        })
+    }
+)
