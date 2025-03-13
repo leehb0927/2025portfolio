@@ -254,17 +254,57 @@ gsap.to('.work-history .view-link > a', {
 
 /* learning & tech stack */
 //리스트 line 하나씩 나타나기
-
 gsap.utils.toArray('.learning .list .line').forEach(
     (lines, index) => {
         gsap.to(lines, {
             scrollTrigger: {
                 trigger: '.learning',
                 start: 'top top',
-                markers: true
+                // markers: true
             },
             width: '100%',
             delay: (index + 1) * .06
         })
     }
 )
+//리스트 텍스트 움직임
+gsap.utils.toArray('.learning .list a').forEach(
+    (linkBox) => {
+        gsap.to(linkBox, {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: linkBox,
+                start: 'top bottom'
+            }
+        })
+    }
+)
+
+gsap.utils.toArray('.learning .list li').forEach((item) => {
+    const imgBox = item.querySelector('.img-box');
+
+    // hover 시 opacity 1로 변경
+    item.addEventListener('mouseenter', () => {
+        gsap.to(imgBox, { opacity: 1, duration: 0.3 });
+    });
+
+    item.addEventListener('mouseleave', () => {
+        gsap.to(imgBox, { opacity: 0, duration: 0.3 });
+    });
+
+    // 마우스 움직임에 따라 이미지 박스 이동
+    item.addEventListener('mousemove', (e) => {
+        const { left, top, width, height } = item.getBoundingClientRect();
+        const x = e.clientX - (left + width / 2); // li 중앙 기준 X 위치
+        const y = e.clientY - (top + height / 2); // li 중앙 기준 Y 위치
+
+        gsap.to(imgBox, {
+            x: x * 0.3, // 움직임 정도 조절
+            y: y * 0.3,
+            duration: 0.2,
+            ease: 'power2.out'
+        });
+    });
+});
+

@@ -412,7 +412,11 @@ section {
                         font-size: 1.6rem;
                     }
                     .view, .github {
+                        width: 100px;
                         font-size: 2.3rem;
+                    }
+                    .github {
+                        text-align: right;
                     }
                 }
                 .works-bg {
@@ -480,16 +484,28 @@ section {
             .list {
                 margin-top: 75px;
                 li {
+                    position: relative;
                     display: flex;
                     align-items: center;
                     padding-left: 3vw;
                     height: 150px;
                     box-sizing: border-box;
+                    cursor: pointer;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateY(30px);
+                        opacity: 0;
+                        z-index: 9;
+                    }
                     &.line {
                         padding: 0;
                         width: 0;
                         height: 1px;
                         background-color: $color-base-white;
+                        z-index: 0;
                     }
                     h3 {
                         width: 50%;
@@ -501,6 +517,24 @@ section {
                         font-size: 1.2rem;
                         line-height: 2.3rem;
                         color: $color-gray;
+                    }
+                    .img-box {
+                        position: absolute;
+                        z-index: 9;
+                        left: 130px;
+                        opacity: 0;
+                        z-index: 99;
+                    }
+
+                    //리스트 개별
+                    &.flutter {
+                        .img-box {
+                            transform: scale(.5);
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
                     }
                 }
             }
