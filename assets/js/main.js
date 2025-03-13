@@ -281,10 +281,11 @@ gsap.utils.toArray('.learning .list a').forEach(
     }
 )
 
+//learning 리스트에 cursor 올리면 이미지 나타나고, cursor에 맞춰서 움직임
 gsap.utils.toArray('.learning .list li').forEach((item) => {
     const imgBox = item.querySelector('.img-box');
 
-    // hover 시 opacity 1로 변경
+    // hover 시 opacity 변경
     item.addEventListener('mouseenter', () => {
         gsap.to(imgBox, { opacity: 1, duration: 0.3 });
     });
@@ -296,11 +297,11 @@ gsap.utils.toArray('.learning .list li').forEach((item) => {
     // 마우스 움직임에 따라 이미지 박스 이동
     item.addEventListener('mousemove', (e) => {
         const { left, top, width, height } = item.getBoundingClientRect();
-        const x = e.clientX - (left + width / 2); // li 중앙 기준 X 위치
-        const y = e.clientY - (top + height / 2); // li 중앙 기준 Y 위치
+        const x = e.clientX - (left + width / 2); 
+        const y = e.clientY - (top + height / 2);
 
         gsap.to(imgBox, {
-            x: x * 0.3, // 움직임 정도 조절
+            x: x * 0.3,
             y: y * 0.3,
             duration: 0.2,
             ease: 'power2.out'
