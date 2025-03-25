@@ -1,4 +1,12 @@
-gsap.registerPlugin(ScrollTrigger);
+const lenis = new Lenis()
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 500)
+})
+
+gsap.ticker.lagSmoothing(0)
 
 //현재시간 표기하기
 const currentTime = document.querySelector('.header-wrap .time');
@@ -259,7 +267,7 @@ gsap.utils.toArray('.learning .list .line').forEach(
         gsap.to(lines, {
             scrollTrigger: {
                 trigger: '.learning',
-                start: 'top top',
+                start: 'top 50%',
                 // markers: true
             },
             width: '100%',
