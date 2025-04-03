@@ -8,6 +8,10 @@ gsap.ticker.add((time)=>{
 
 gsap.ticker.lagSmoothing(0)
 
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
 //현재시간 표기하기
 const currentTime = document.querySelector('.header-wrap .time');
 
@@ -46,7 +50,7 @@ function setProperty() {
     scrollHeight = mainVScrollBody.offsetHeight;
     winScrollTop = window.pageYOffset;
     scrollRealHeight = (scrollHeight - window.innerHeight);
-    scrollPerecnt = winScrollTop / scrollHeight; // 첫 시작점 0 ~ 끝 점 1
+    scrollPerecnt = winScrollTop / scrollRealHeight;
     percent = scrollPerecnt * 100; //스크롤 영역 백분율
 }
 
@@ -71,12 +75,14 @@ function motionRender() {
 }
 
 function init() {
-    mainScroll()
+    mainScroll(); // 초기 실행
+    window.addEventListener('scroll', function () {
+        mainScroll();
+    });
+    window.addEventListener('resize', function () {
+        mainScroll(); // 윈도우 리사이즈 시에도 반영
+    });
 }
-
-window.addEventListener('scroll', function() {
-    mainScroll()
-})
 
 init()
 
@@ -161,7 +167,7 @@ gsap.timeline({
 .to('.main-visual .visual-wrap .first-line', {x: '-200%'}, 0)
 .to('.main-visual .visual-wrap .second-line', {x: '200%'}, 0)
 
-gsap.timeline({
+/* gsap.timeline({
     scrollTrigger: {
         trigger: '.main-visual .visual-wrap',
         start: `${800 + window.innerHeight}px bottom`,
@@ -170,7 +176,7 @@ gsap.timeline({
     }
 })
 .to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 1})
-.to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 0,  delay: .3})
+.to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 0,  delay: .3}) */
 
 gsap.timeline({
     scrollTrigger: {

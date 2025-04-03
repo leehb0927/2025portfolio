@@ -32,6 +32,7 @@ $font-Pretendard-Thin: 'Pretendard-Thin';
 $font-Pretendard-ExtraLight : 'Pretendard-ExtraLight';
 $font-Pretendard-Light: 'Pretendard-Light';
 $font-Pretendard-Regular: 'Pretendard-Regular';
+$font-Pretendard-SemiBold: 'Pretendard-SemiBold';
 $font-Pretendard-Bold: 'Pretendard-Bold';
 
 /* colors */
@@ -112,4 +113,11 @@ $color-black-01: rgba($color-black, .1);
     100% {
         transform: rotate(360deg);
     }
+}
+
+@keyframes infiniteCarousel {
+    0%   { opacity: 1; }
+    49.9% { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 0; }
 }

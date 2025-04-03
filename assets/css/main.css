@@ -13,6 +13,20 @@
     transform: rotate(360deg);
   }
 }
+@keyframes infiniteCarousel {
+  0% {
+    opacity: 1;
+  }
+  49.9% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 section {
   width: 100%;
 }
@@ -93,6 +107,75 @@ section {
 .main-visual .sticky-wrap .visual-inner .text p.second-line:nth-of-type(2) {
   margin-top: 14px;
   margin-right: -4vw;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .inner {
+  width: 90vw;
+  margin: 0 auto;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .outline-text .line p, .main-visual .sticky-wrap .visual-inner .outline-wrap .outline-text .line span {
+  font-family: "Pretendard-SemiBold";
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .top {
+  padding-top: 15vh;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .top .eng {
+  width: 25vw;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .top .eng p, .main-visual .sticky-wrap .visual-inner .outline-wrap .top .eng span {
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+  text-align-last: justify;
+  color: rgba(255, 255, 255, 0.6);
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom {
+  position: relative;
+  padding-top: 6vh;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .ko .line:nth-child(1) {
+  text-align: right;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .ko .line p {
+  font-size: 2.7vw;
+  line-height: 3.5vw;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap {
+  position: absolute;
+  bottom: -8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 15vw;
+  z-index: -1;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: infiniteCarousel 2s steps(1, end) infinite;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap img:nth-child(1) {
+  animation-delay: 0s;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap img:nth-child(2) {
+  animation-delay: 1s;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .main-visual .sticky-wrap .visual-inner .intro-wrap {
   display: flex;

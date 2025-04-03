@@ -85,6 +85,80 @@ section {
                 }
             }
 
+            .outline-wrap {
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                z-index: 2;
+                .inner {
+                    width: 90vw;
+                    margin: 0 auto;
+                }
+                .outline-text {
+                    .line {
+                        p, span {
+                            font-family: $font-Pretendard-SemiBold;
+                        }
+                    }
+                }
+                .top {
+                    padding-top: 15vh;
+                    .eng {
+                        width: 25vw;
+                        p,span {
+                            font-size: 1.5vw;
+                            line-height: 2.2vw;
+                            text-align-last: justify;
+                            color: rgba($color-white, .6);
+                        }
+                    }
+                }
+                .bottom {
+                    position: relative;
+                    padding-top: 6vh;
+                    .ko {
+                        .line {
+                            &:nth-child(1) {
+                                text-align: right;
+                            }
+                            p {
+                                font-size: 2.7vw;
+                                line-height: 3.5vw;
+                            }
+                        }
+                    }
+                    .img-wrap {
+                        position: absolute;
+                        bottom: -8vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 15vw;
+                        height: 15vw;
+                        z-index: -1;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            animation: infiniteCarousel 2s steps(1, end) infinite;
+                            &:nth-child(1) {
+                                animation-delay: 0s;
+                            }
+                            &:nth-child(2) {
+                                animation-delay: 1s;
+                            }
+                        }
+                        &::after {
+                            @include vs;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
             .intro-wrap {
                 display: flex;
                 flex-direction: column;
