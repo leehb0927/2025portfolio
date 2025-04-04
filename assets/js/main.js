@@ -154,29 +154,83 @@ function scrollDownHandle() {
 
 window.addEventListener("scroll", scrollDownHandle);
 
-//메인비주얼 gsap
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: 'top top',
-        end: `${800 + window.innerHeight}px bottom`,
-        scrub: 1,
+
+/* 메인 비주얼 스크롤 이벤트 - 스크롤을 내릴 때마다 영역이 변함 */
+function mainVisualScroll() {
+    const vh = window.innerHeight;
+    const trigger = '.main-visual .visual-wrap'
+
+    //timeline 스크롤 트리거 공통
+    function createTimline(startOffset, endOffest, markers = false) {
+        return gsap.timeline({
+            scrollTrigger: {
+                trigger: trigger,
+                start: `${startOffset + vh}px bottom`,
+                end: `${endOffest + vh}px bottom`,
+                scrub: 1,
+                markers: markers
+            }
+        })
     }
-})
-//메인비주얼 span이 옆으로 사라짐
-.to('.main-visual .visual-wrap .first-line', {x: '-200%'}, 0)
-.to('.main-visual .visual-wrap .second-line', {x: '200%'}, 0)
+
+    //메인비주얼 텍스트 좌, 우로 사라짐
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: trigger,
+            //top 값 때문에 공통함수를 호출해 쓸 수 없음
+            start: 'top top',
+            end: `${800 + window.innerHeight}px bottom`,
+            scrub: 1,
+        }
+    })
+    //메인비주얼 span이 옆으로 사라짐
+    .to(`${trigger} .first-line`, {x: '-200%'}, 0)
+    .to(`${trigger} .second-line`, {x: '200%'}, 0)
+
+    /* timline 스크롤 트리거 순차 적용 */
+    //아웃라인 top 텍스트 한 줄 씩 나타남
+    const oulineTopText = document.querySelectorAll(`${trigger} .outline-wrap .top .outline-text .line p`);
+    oulineTopText.forEach((el, index) => {
+        createTimline(800, 2000)
+        .to(el, {
+            y: 0,
+            delay: (index + 1) * 0.08
+        })
+        .to(`${trigger} .outline-wrap .top .scroll-icon`, {opacity: 1})
+    })
+
+    const outlineBottomText = document.querySelectorAll(`${trigger} .outline-wrap .bottom .outline-text .line p`);
+    outlineBottomText.forEach((el, index) => {
+        createTimline(2000, 3200)
+        .to(el, {
+            y: 0,
+            delay: (index + 1) * 0.08
+        })
+        .to(`${trigger} .outline-wrap .bottom .img-wrap`, {opacity: 1})
+    })
+
+    /* 
+    craeteTimeline(시작 지점 위치 (+ 윈도우 크기), 끝나는 지점 (+ 윈도우 크기)).타임라인 적용
+    */
+    //outline 영역 사라짐
+    createTimline(3400, 3500)
+        .to(`${trigger} .outline-wrap .top`, {opacity: 0})
+        .to(`${trigger} .outline-wrap .bottom`, {opacity: 0}, '<')
+}
+
+//호출
+mainVisualScroll();
+
 
 /* gsap.timeline({
     scrollTrigger: {
         trigger: '.main-visual .visual-wrap',
-        start: `${800 + window.innerHeight}px bottom`,
-        end: `${1800 + window.innerHeight}px bottom`,
+        start: `${3500 + window.innerHeight}px bottom`,
+        end: `${3700 + window.innerHeight}px bottom`,
         scrub: 1,
     }
 })
-.to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 1})
-.to('.main-visual .visual-wrap .intro-wrap.wrap1', {opacity: 0,  delay: .3}) */
+.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1})
 
 gsap.timeline({
     scrollTrigger: {
@@ -206,8 +260,7 @@ gsap.timeline({
         scrub: 1,
     }
 })
-.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1})
-
+.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1}) */
 
 gsap.timeline({
     scrollTrigger: {

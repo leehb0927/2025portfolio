@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* variables */
 /* colors */
 /* mixins */
@@ -26,6 +27,28 @@
   100% {
     opacity: 0;
   }
+}
+@keyframes arrowDrop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-100%);
+    opacity: 0;
+  } /* 위로 순간 이동 + 사라짐 */
+  60% {
+    transform: translateY(-100%);
+    opacity: 0;
+  } /* 위로 순간 이동 + 사라짐 */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  } /* 다시 내려오기 */
 }
 section {
   width: 100%;
@@ -118,10 +141,16 @@ section {
   width: 90vw;
   margin: 0 auto;
 }
+.main-visual .sticky-wrap .visual-inner .outline-wrap .outline-text .line {
+  overflow: hidden;
+}
 .main-visual .sticky-wrap .visual-inner .outline-wrap .outline-text .line p, .main-visual .sticky-wrap .visual-inner .outline-wrap .outline-text .line span {
   font-family: "Pretendard-SemiBold";
+  transform: translateY(100%);
 }
 .main-visual .sticky-wrap .visual-inner .outline-wrap .top {
+  display: flex;
+  justify-content: space-between;
   padding-top: 15vh;
 }
 .main-visual .sticky-wrap .visual-inner .outline-wrap .top .eng {
@@ -132,6 +161,18 @@ section {
   line-height: 2.2vw;
   text-align-last: justify;
   color: rgba(255, 255, 255, 0.6);
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .top .scroll-icon {
+  width: 7vw;
+  height: 7vw;
+  overflow: hidden;
+  opacity: 0;
+}
+.main-visual .sticky-wrap .visual-inner .outline-wrap .top .scroll-icon .arrow-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../image/arrowDown.png") no-repeat center/cover;
 }
 .main-visual .sticky-wrap .visual-inner .outline-wrap .bottom {
   position: relative;
@@ -152,6 +193,7 @@ section {
   width: 15vw;
   height: 15vw;
   z-index: -1;
+  opacity: 0;
 }
 .main-visual .sticky-wrap .visual-inner .outline-wrap .bottom .img-wrap img {
   position: absolute;
@@ -288,11 +330,27 @@ section {
   gap: 200px;
   padding-left: 30vw;
 }
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap {
+  position: relative;
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: 0.5s;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap img.hover {
+  opacity: 0;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap:hover img {
+  opacity: 0;
+}
+.main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap:hover img.hover {
+  opacity: 1;
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company {
   display: block;

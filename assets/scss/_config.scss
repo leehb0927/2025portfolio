@@ -121,3 +121,11 @@ $color-black-01: rgba($color-black, .1);
     50%  { opacity: 0; }
     100% { opacity: 0; }
 }
+
+@keyframes arrowDrop {
+    0%   { transform: translateY(0); opacity: 1; }
+    20%  { transform: translateY(100%); opacity: 1; }
+    40%  { transform: translateY(-100%); opacity: 0; } /* 위로 순간 이동 + 사라짐 */
+    60%  { transform: translateY(-100%); opacity: 0; } /* 위로 순간 이동 + 사라짐 */
+    100% { transform: translateY(0); opacity: 1; }     /* 다시 내려오기 */
+  }

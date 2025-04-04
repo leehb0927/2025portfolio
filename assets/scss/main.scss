@@ -96,12 +96,16 @@ section {
                 }
                 .outline-text {
                     .line {
+                        overflow: hidden;
                         p, span {
                             font-family: $font-Pretendard-SemiBold;
+                            transform: translateY(100%);
                         }
                     }
                 }
                 .top {
+                    display: flex;
+                    justify-content: space-between;
                     padding-top: 15vh;
                     .eng {
                         width: 25vw;
@@ -110,6 +114,18 @@ section {
                             line-height: 2.2vw;
                             text-align-last: justify;
                             color: rgba($color-white, .6);
+                        }
+                    }
+                    .scroll-icon {
+                        width: 7vw;
+                        height: 7vw;
+                        overflow: hidden;
+                        opacity: 0;
+                        .arrow-icon {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            background: url('../image/arrowDown.png') no-repeat center / cover;
                         }
                     }
                 }
@@ -135,6 +151,8 @@ section {
                         width: 15vw;
                         height: 15vw;
                         z-index: -1;
+
+                        opacity: 0;
                         img {
                             position: absolute;
                             top: 0;
@@ -275,11 +293,27 @@ section {
                         padding-left: 30vw;
                         li {
                             .thumb-wrap {
+                                position: relative;
                                 img {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
                                     width: 100%;
                                     height: 100%;
                                     object-fit: cover;
                                     object-position: center;
+                                    transition: .5s;
+                                    &.hover {
+                                        opacity: 0
+                                    }
+                                }
+                                &:hover {
+                                    img {
+                                        opacity: 0;
+                                        &.hover {
+                                            opacity: 1;
+                                        }
+                                    }
                                 }
                             }
                             .desc {
