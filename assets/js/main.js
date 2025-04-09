@@ -161,7 +161,7 @@ function mainVisualScroll() {
     const trigger = '.main-visual .visual-wrap'
 
     //timeline 스크롤 트리거 공통
-    function createTimline(startOffset, endOffest, markers = false) {
+    function createTimeline(startOffset, endOffest, markers = false) {
         return gsap.timeline({
             scrollTrigger: {
                 trigger: trigger,
@@ -191,7 +191,7 @@ function mainVisualScroll() {
     //아웃라인 top 텍스트 한 줄 씩 나타남
     const oulineTopText = document.querySelectorAll(`${trigger} .outline-wrap .top .outline-text .line p`);
     oulineTopText.forEach((el, index) => {
-        createTimline(800, 2000)
+        createTimeline(800, 2000)
         .to(el, {
             y: 0,
             delay: (index + 1) * 0.08
@@ -201,7 +201,7 @@ function mainVisualScroll() {
 
     const outlineBottomText = document.querySelectorAll(`${trigger} .outline-wrap .bottom .outline-text .line p`);
     outlineBottomText.forEach((el, index) => {
-        createTimline(2000, 3200)
+        createTimeline(2000, 3200)
         .to(el, {
             y: 0,
             delay: (index + 1) * 0.08
@@ -213,68 +213,20 @@ function mainVisualScroll() {
     craeteTimeline(시작 지점 위치 (+ 윈도우 크기), 끝나는 지점 (+ 윈도우 크기)).타임라인 적용
     */
     //outline 영역 사라짐
-    createTimline(3400, 3500)
+    createTimeline(3800, 3900)
         .to(`${trigger} .outline-wrap .top`, {opacity: 0})
         .to(`${trigger} .outline-wrap .bottom`, {opacity: 0}, '<')
+
+    /* work 영역 나타남 */
+    createTimeline(4000, 5500)
+        .to(`${trigger} .work-history .inner`, {height: '100vh'}, 0)
+        .to(`${trigger} .intro-wrap.wrap2 .inner.top`, {y: '-50vh' , opacity: 0}, 0)
+        .to(`${trigger} .intro-wrap.wrap2 .inner.bottom`, {y: '50vh', opacity: 0}, 0)
+        .to(`${trigger} .work-history .horizontal-wrap`, {opacity: 1})
 }
 
 //호출
 mainVisualScroll();
-
-
-/* gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: `${3500 + window.innerHeight}px bottom`,
-        end: `${3700 + window.innerHeight}px bottom`,
-        scrub: 1,
-    }
-})
-.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1})
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: `${2200 + window.innerHeight}px bottom`,
-        end: `${2700 + window.innerHeight}px bottom`,
-        scrub: 1,
-    }
-})
-.to('.main-visual .visual-wrap .intro-wrap.wrap2', {opacity: 1})
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: `${2700 + window.innerHeight}px bottom`,
-        end: `${3000 + window.innerHeight}px bottom`,
-        scrub: 1,
-    }
-})
-.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions' ,{marginLeft: '6vw'})
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: `${3500 + window.innerHeight}px bottom`,
-        end: `${3700 + window.innerHeight}px bottom`,
-        scrub: 1,
-    }
-})
-.to('.main-visual .visual-wrap .intro-wrap .intro-eng span.interactions .icon' ,{opacity: 1}) */
-
-gsap.timeline({
-    scrollTrigger: {
-        trigger: '.main-visual .visual-wrap',
-        start: `${4000 + window.innerHeight}px bottom`,
-        end: `${5500 + window.innerHeight}px bottom`,
-        scrub: 1,
-        // markers: true
-    }
-})
-.to('.main-visual .visual-wrap .work-history .inner', {height: '100vh'}, 0)
-.to('.main-visual .visual-wrap .intro-wrap.wrap2 .inner.top' ,{y: '-50vh' , opacity: 0}, 0)
-.to('.main-visual .visual-wrap .intro-wrap.wrap2 .inner.bottom' ,{y: '50vh', opacity: 0}, 0)
-.to('.main-visual .visual-wrap .work-history .horizontal-wrap', {opacity: 1})
 
 
 
