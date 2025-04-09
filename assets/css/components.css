@@ -50,3 +50,52 @@ header .header-wrap p, header .header-wrap a {
 header .header-wrap .time {
   font-variant-numeric: tabular-nums;
 }
+
+.footer .footer-wrap {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+.footer .footer-wrap .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../image/footerBg.png") no-repeat center/cover;
+}
+.footer .footer-wrap .bg:after, .footer .footer-wrap .bg::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer .footer-wrap .bg::after {
+  background: linear-gradient(to bottom, #141414, rgba(20, 20, 20, 0));
+}
+.footer .footer-wrap .bg::before {
+  background: rgba(20, 20, 20, 0.8);
+}
+.footer .footer-wrap .text-wrap {
+  position: absolute;
+  width: 100%;
+}
+.footer .footer-wrap .text-wrap .inner {
+  padding: 5vw 5vw 0;
+}
+.footer .footer-wrap .text-wrap .inner .title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer-wrap .text-wrap .inner .title-wrap .bracket span {
+  font-family: "D2-Coding";
+  font-size: 7rem;
+}
+.footer .footer-wrap .text-wrap .inner .title-wrap h2 {
+  font-family: "Geist-SemiBold";
+  font-size: 7rem;
+}

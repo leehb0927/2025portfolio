@@ -8,9 +8,10 @@ gsap.ticker.add((time)=>{
 
 gsap.ticker.lagSmoothing(0)
 
-window.onbeforeunload = function () {
+/* 새로고침하면 최상단 이동 */
+/* window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-};
+}; */
 
 //현재시간 표기하기
 const currentTime = document.querySelector('.header-wrap .time');
@@ -227,9 +228,6 @@ function mainVisualScroll() {
 
 //호출
 mainVisualScroll();
-
-
-
 
 
 
