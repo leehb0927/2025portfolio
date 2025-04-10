@@ -326,3 +326,42 @@ gsap.utils.toArray('.learning .list li').forEach((item) => {
     });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+function footerLinkOpen() {
+    //footer 타이틀 열림
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.footer',
+            start: 'top bottom',
+        }
+    })
+    .to('.footer .title-wrap .close-wrap .close', {left: '100%'}, 0)
+    .to('.footer .title-wrap .close-wrap h2', {clipPath: 'inset(0 0 0 0)' }, 0)
+
+
+    const closeTagsText = document.querySelectorAll('.footer .contents-wrap .portfolio-links a .close-wrap .text');
+    const closeTags = document.querySelectorAll('.footer .contents-wrap .portfolio-links a .close-wrap .close');
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.footer .contents-wrap .portfolio-links',
+        }
+    })
+    .to(closeTags, {left: '100%', stagger: .8}, 0)
+    .to(closeTagsText, {clipPath: 'inset(0 0 0 0)', stagger: .8}, 0)
+}
+
+footerLinkOpen()

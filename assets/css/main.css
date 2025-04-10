@@ -519,6 +519,7 @@ section {
   text-align: right;
 }
 .works .works-wrapper .inner .works-card .works-bg {
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -531,6 +532,35 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.works .works-wrapper .inner .works-card .works-bg .desc-wrap {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  top: 0;
+  overflow: hidden;
+}
+.works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 20vh;
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner p {
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.4rem;
+  padding-left: 2vw;
+}
+.works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner .hash-tags {
+  padding-left: 2vw;
+  margin-top: 5vh;
+}
+.works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner .hash-tags span {
+  font-family: "Pretendard-Thin";
+  font-size: 1.2rem;
 }
 .works .works-wrapper .inner .works-card .desc {
   position: absolute;

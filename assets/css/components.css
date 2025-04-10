@@ -79,6 +79,17 @@ header .header-wrap .time {
 .footer .footer-wrap .bg::before {
   background: rgba(20, 20, 20, 0.8);
 }
+.footer .footer-wrap .close-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .footer-wrap .close-wrap .close {
+  position: absolute;
+  left: 0;
+  transition: left 1s;
+}
 .footer .footer-wrap .text-wrap {
   position: absolute;
   width: 100%;
@@ -90,12 +101,63 @@ header .header-wrap .time {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: -13vw;
+  position: relative;
+}
+.footer .footer-wrap .text-wrap .inner .title-wrap .bracket {
+  display: flex;
+  align-items: center;
 }
 .footer .footer-wrap .text-wrap .inner .title-wrap .bracket span {
   font-family: "D2-Coding";
-  font-size: 7rem;
+  font-size: 6vw;
+}
+.footer .footer-wrap .text-wrap .inner .title-wrap .bracket .smile {
+  display: inline-block;
+  width: 6vw;
+  height: 6vw;
+  background: url("../image/smileIcon.png") no-repeat center/cover;
 }
 .footer .footer-wrap .text-wrap .inner .title-wrap h2 {
-  font-family: "Geist-SemiBold";
-  font-size: 7rem;
+  font-family: "D2-Coding";
+  font-size: 6vw;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1s;
+}
+.footer .footer-wrap .contents-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-top: 5vw;
+}
+.footer .footer-wrap .contents-wrap .desc p {
+  font-family: "Pretendard-ExtraLight";
+  font-size: 1.6rem;
+  line-height: 22px;
+}
+.footer .footer-wrap .contents-wrap .desc p.eng {
+  margin-bottom: 3vw;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links a {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links a:last-child {
+  margin-right: 36px;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links a span {
+  font-family: "D2-Coding";
+  font-size: 1.8rem;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links a span.open, .footer .footer-wrap .contents-wrap .portfolio-links a span.close {
+  color: #67a1f1;
+}
+.footer .footer-wrap .contents-wrap .portfolio-links a .close-wrap .text {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1s;
 }
