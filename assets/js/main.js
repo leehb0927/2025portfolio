@@ -235,6 +235,38 @@ mainVisualScroll();
 
 
 
+
+
+/* work-history */
+//(view)에 hover하면 프로젝트 상세 내용 slideDown
+function worksCardSlide() {
+    const worksCards = document.querySelectorAll('main .works .works-card');
+
+    worksCards.forEach(card => {
+        const link = card.querySelector('.works-title .view');
+        const descWrap = card.querySelector('.works-bg .desc-wrap')
+        const descHeight = card.querySelector('.works-bg .desc-wrap .inner').offsetHeight;
+        /* const descHeight = descWrap.offsetHeight; */
+
+        link.addEventListener('mouseenter', ( )=> {
+            descWrap.style.height = `${descHeight}px`;
+        })
+        link.addEventListener('mouseleave',() => {
+            descWrap.style.height = `0px`
+        })
+    })
+}
+
+worksCardSlide()
+
+
+
+
+
+
+
+
+
 /* works */
 //works 가로스크롤 페이지
 let worksScrollTween = gsap.to(".main-visual .visual-wrap .work-history .horizontal-wrap", {
