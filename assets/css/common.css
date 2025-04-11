@@ -1,4 +1,12 @@
+@charset "UTF-8";
 /* variables */
+/* 반응형 break point */
+/* 
+Desktop 1280px 이상
+Small Desktop/Laptop 1024px ~ 1279px
+Tablet 768px ~ 1023px
+Mobile ~ 767px
+*/
 /* colors */
 /* mixins */
 /* animation */

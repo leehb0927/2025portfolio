@@ -1,5 +1,27 @@
 @import 'config';
 
+//break 태그 
+br {
+    &.laptop-b, &.tablet-b, &.mobile-b {
+        display: block;
+    }
+    &.laptop-b {
+        @include laptop {
+            display: block !important;
+        }
+    }
+    &.tablet-b {
+        @include tablet {
+            display: block !important;
+        }
+    }
+    &.mobile-b {
+        @include mobile {
+            display: block !important;
+        }
+    }
+}
+
 header {
     position: fixed;
     width: 100%;

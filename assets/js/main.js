@@ -221,8 +221,6 @@ function mainVisualScroll() {
     /* work 영역 나타남 */
     createTimeline(4000, 5500)
         .to(`${trigger} .work-history .inner`, {height: '100vh'}, 0)
-        .to(`${trigger} .intro-wrap.wrap2 .inner.top`, {y: '-50vh' , opacity: 0}, 0)
-        .to(`${trigger} .intro-wrap.wrap2 .inner.bottom`, {y: '50vh', opacity: 0}, 0)
         .to(`${trigger} .work-history .horizontal-wrap`, {opacity: 1})
 }
 
@@ -333,6 +331,8 @@ gsap.utils.toArray('.learning .list a').forEach(
 //learning 리스트에 cursor 올리면 이미지 나타나고, cursor에 맞춰서 움직임
 gsap.utils.toArray('.learning .list li').forEach((item) => {
     const imgBox = item.querySelector('.img-box');
+    //imgBox가 없는 경우 mouseenter했을 때 에러메세지가 계속 뜨는데 imgBox가 없으면 코드를 스킵해 에러를 없애준다.
+    if (!imgBox) return;
 
     // hover 시 opacity 변경
     item.addEventListener('mouseenter', () => {

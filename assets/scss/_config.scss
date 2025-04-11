@@ -37,6 +37,31 @@ $font-Pretendard-Bold: 'Pretendard-Bold';
 
 $font-d2 : 'D2-Coding';
 
+/* 반응형 break point */
+/* 
+Desktop 1280px 이상
+Small Desktop/Laptop 1024px ~ 1279px
+Tablet 768px ~ 1023px
+Mobile ~ 767px
+*/
+@mixin laptop {
+    @media (max-width: 1279px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 767px) {
+        @content;
+    }
+}
+
 /* colors */
 //기본 컬러
 $color-white: #fff;

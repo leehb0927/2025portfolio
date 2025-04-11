@@ -65,11 +65,23 @@ section {
                         opacity: 0;
                         transition: .6s;
                         text-transform: uppercase;
+                        @include laptop {
+                            font-size: 6vw;
+                        }
+                        @include tablet {
+                            font-size: 4.5vw;
+                        }
                         &.italic {
                             font-family: $font-Whisper;
                             font-size: 6vw;
                             color: $color-white;
                             text-transform: none;
+                            @include laptop {
+                                font-size: 7.5vw;
+                            }
+                            @include tablet {
+                                font-size: 6vw;
+                            }
                         }
                         &.on {
                             filter: none;
@@ -109,11 +121,25 @@ section {
                     padding-top: 15vh;
                     .eng {
                         width: 25vw;
+                        @include laptop {
+                            width: 40vw;
+                        }
+                        @include tablet {
+                            width: 60vw;
+                        }
                         p,span {
                             font-size: 1.5vw;
                             line-height: 2.2vw;
                             text-align-last: justify;
                             color: rgba($color-white, .6);
+                            @include laptop {
+                                font-size: 2vw;
+                                line-height: 3vw;
+                            }
+                            @include tablet {
+                                font-size: 3vw;
+                                line-height: 4vw;
+                            }
                         }
                     }
                     .scroll-icon {
@@ -121,6 +147,10 @@ section {
                         height: 7vw;
                         overflow: hidden;
                         opacity: 0;
+                        @include laptop {
+                            width: 11vw;
+                            height: 11vw;
+                        }
                         .arrow-icon {
                             display: block;
                             width: 100%;
@@ -134,12 +164,22 @@ section {
                     padding-top: 6vh;
                     .ko {
                         .line {
+                            @include tablet {
+                                text-align: right;
+                            }
                             &:nth-child(1) {
                                 text-align: right;
                             }
                             p {
                                 font-size: 2.7vw;
                                 line-height: 3.5vw;
+                                @include tablet {
+                                    font-size: 3.2vw;
+                                    line-height: 4.5vw;
+                                }
+                                br {
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -153,6 +193,18 @@ section {
                         z-index: -1;
 
                         opacity: 0;
+                        @include laptop {
+                            width: 20vw;
+                            height: 20vw;
+                            bottom: -16vw;
+                        }
+                        @include tablet {
+                            width: 25vw;
+                            height: 25vw;
+                            bottom: -5vw;
+                            left: 20vw;
+                            transform: unset;
+                        }
                         img {
                             position: absolute;
                             top: 0;
@@ -488,10 +540,10 @@ section {
                 background-color: $color-base-black;
                 z-index: 99;
                 h2 {
+                    font-family: $font-Bold;
+                    font-size: 10vw;
                     padding-top: 100px;
-                    svg {
-                        fill: $color-base-white;
-                    }
+                    padding-left: 2vw;
                 }
             }
             .works-card {
@@ -544,14 +596,11 @@ section {
                     .desc-wrap {
                         position: absolute;
                         width: 100%;
-                        height: 0;
                         top: 0;
                         overflow: hidden;
                         transition: height 1s;
 
-                        &.down {
-                            height: auto;
-                        }
+                        height: 0;
 
                         .inner {
                             display: flex;
@@ -591,6 +640,7 @@ section {
 /* learning */
 .learning {
     background-color: $color-base-black;
+    overflow: hidden;
     .inner {
         display: flex;
         justify-content: space-between;

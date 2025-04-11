@@ -1,4 +1,12 @@
+@charset "UTF-8";
 /* variables */
+/* 반응형 break point */
+/* 
+Desktop 1280px 이상
+Small Desktop/Laptop 1024px ~ 1279px
+Tablet 768px ~ 1023px
+Mobile ~ 767px
+*/
 /* colors */
 /* mixins */
 /* animation */
@@ -27,6 +35,25 @@
     opacity: 0;
   }
 }
+br.laptop-b, br.tablet-b, br.mobile-b {
+  display: block;
+}
+@media (max-width: 1279px) {
+  br.laptop-b {
+    display: block !important;
+  }
+}
+@media (max-width: 1023px) {
+  br.tablet-b {
+    display: block !important;
+  }
+}
+@media (max-width: 767px) {
+  br.mobile-b {
+    display: block !important;
+  }
+}
+
 header {
   position: fixed;
   width: 100%;
