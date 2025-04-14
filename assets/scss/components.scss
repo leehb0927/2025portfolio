@@ -33,9 +33,15 @@ header {
         padding: 15px 2vw 0;
         h1, p, a {
             font-size: 1.5rem;
+            @include tablet {
+                font-size: 1.3rem;
+            }
         }
         h1 {
             line-height: 20px;
+            @include tablet {
+                line-height: 18px;
+            }
         }
         p, a {
             font-family: $font-ExtraLight;
@@ -117,6 +123,11 @@ header {
             justify-content: space-between;
             align-items: end;
             padding-top: 5vw;
+            @include tablet {
+                flex-direction: column;
+                align-items: start;
+                gap: 16vh;
+            }
             .desc {
                 p {
                     font-family: $font-Pretendard-ExtraLight;

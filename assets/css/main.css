@@ -381,6 +381,11 @@ section {
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap h2 {
   font-size: 13rem;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap h2 {
+    font-size: 10rem;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .title-wrap p {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.5rem;
@@ -392,6 +397,11 @@ section {
   align-items: start;
   gap: 200px;
   padding-left: 30vw;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list {
+    gap: 150px;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .thumb-wrap {
   position: relative;
@@ -421,10 +431,20 @@ section {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.2rem;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc .company {
+    font-size: 1rem;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc h3 {
   margin-top: 8px;
   font-family: "Pretendard-Bold";
   font-size: 3rem;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc h3 {
+    font-size: 2rem;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc p {
   margin-top: 24px;
@@ -432,33 +452,80 @@ section {
   font-size: 1.5rem;
   line-height: 2.3rem;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li .desc p {
+    font-size: 1.3rem;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.museuml .thumb-wrap {
   width: 720px;
   height: 420px;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.museuml .thumb-wrap {
+    width: 540px;
+    height: 315px;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.unitsoft .thumb-wrap {
   width: 512px;
   height: 290px;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.unitsoft .thumb-wrap {
+    width: 384px;
+    height: 217.5px;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lghv-home .thumb-wrap {
   width: 535px;
   height: 420px;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lghv-home .thumb-wrap {
+    width: 401px;
+    height: 315px;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lgu-home .thumb-wrap {
   width: 535px;
   height: 250px;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.lgu-home .thumb-wrap {
+    width: 401px;
+    height: 187.5px;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.kt .thumb-wrap {
   width: 430px;
   height: 350px;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.kt .thumb-wrap {
+    width: 322.5px;
+    height: 262.5px;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-m .thumb-wrap {
   width: 280px;
   height: 425px;
 }
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-m .thumb-wrap {
+    width: 210px;
+    height: 319px;
+  }
+}
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap {
   width: 650px;
   height: 310px;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap {
+    width: 487.5px;
+    height: 232.5px;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .works-list li.commerce-tv .thumb-wrap img {
   object-position: top;
@@ -467,6 +534,11 @@ section {
   position: relative;
   width: 55vw;
   padding-left: 13vw;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more {
+    width: 110vw;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more h2 {
   font-size: 10rem;
@@ -482,6 +554,11 @@ section {
   right: 16vw;
   width: 216px;
   height: 216px;
+}
+@media (max-width: 1023px) {
+  .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link {
+    right: 40vw;
+  }
 }
 .main-visual .sticky-wrap .visual-inner .work-history .horizontal-wrap .view-more .view-link:hover::after {
   opacity: 0;
@@ -564,15 +641,30 @@ section {
   background-color: #141414;
   z-index: 99;
 }
+@media (max-width: 1023px) {
+  .works .works-wrapper .inner .title {
+    height: 230px;
+  }
+}
 .works .works-wrapper .inner .title h2 {
   font-family: "Geist-Bold";
   font-size: 10vw;
   padding-top: 100px;
   padding-left: 2vw;
 }
+@media (max-width: 1023px) {
+  .works .works-wrapper .inner .title h2 {
+    font-size: 11vw;
+  }
+}
 .works .works-wrapper .inner .works-card {
   position: sticky;
   top: 255px;
+}
+@media (max-width: 1023px) {
+  .works .works-wrapper .inner .works-card {
+    top: 230px;
+  }
 }
 .works .works-wrapper .inner .works-card .works-title {
   display: flex;
@@ -638,6 +730,11 @@ section {
 .works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner .thumb-video {
   height: 10vw;
 }
+@media (max-width: 1023px) {
+  .works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner .thumb-video {
+    height: 17vw;
+  }
+}
 .works .works-wrapper .inner .works-card .works-bg .desc-wrap .inner p {
   font-family: "Pretendard-ExtraLight";
   font-size: 1.4rem;
@@ -667,6 +764,17 @@ section {
   padding-bottom: 220px;
   padding-left: 5vw;
 }
+@media (max-width: 1023px) {
+  .learning .inner {
+    display: block;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .learning .inner .title-wrap {
+    padding-left: 5vw;
+  }
+}
 .learning .inner .title-wrap h2 {
   font-size: 3rem;
 }
@@ -686,6 +794,11 @@ section {
 }
 .learning .inner .learning-list {
   width: 55vw;
+}
+@media (max-width: 1023px) {
+  .learning .inner .learning-list {
+    width: 100%;
+  }
 }
 .learning .inner .learning-list .list {
   margin-top: 75px;

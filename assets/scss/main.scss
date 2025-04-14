@@ -330,6 +330,9 @@ section {
                         padding-left: 8vw;
                         h2 {
                             font-size: 13rem;
+                            @include tablet {
+                                font-size: 10rem;
+                            }
                         }
                         p {
                             font-family: $font-Pretendard-ExtraLight;
@@ -343,6 +346,9 @@ section {
                         align-items: start;
                         gap: 200px;
                         padding-left: 30vw;
+                        @include tablet {
+                            gap: 150px;
+                        }
                         li {
                             .thumb-wrap {
                                 position: relative;
@@ -374,59 +380,96 @@ section {
                                     margin-top: 24px;
                                     font-family: $font-Pretendard-ExtraLight;
                                     font-size: 1.2rem;
+                                    @include tablet {
+                                        font-size: 1rem;
+                                    }
                                 }
                                 h3 {
                                     margin-top: 8px;
                                     font-family: $font-Pretendard-Bold;
                                     font-size: 3rem;
+                                    @include tablet {
+                                        font-size: 2rem;
+                                    }
                                 }
                                 p {
                                     margin-top: 24px;
                                     font-family: $font-Pretendard-Light;
                                     font-size: 1.5rem;
                                     line-height: 2.3rem;
+                                    @include tablet {
+                                        font-size: 1.3rem;
+                                    }
                                 }
                             }
                             &.museuml {
                                 .thumb-wrap {
                                     width: 720px;
                                     height: 420px;
+                                    @include tablet {
+                                        width: 540px;
+                                        height: 315px;
+                                    }
                                 }
                             }
                             &.unitsoft {
                                 .thumb-wrap {
                                     width: 512px;
                                     height: 290px;
+                                    @include tablet {
+                                        width: 384px;
+                                        height: 217.5px;
+                                    }
                                 }
                             }
                             &.lghv-home {
                                 .thumb-wrap {
                                     width: 535px;
                                     height: 420px;
+                                    @include tablet {
+                                        width: 401px;
+                                        height: 315px;
+                                    }
                                 }
                             }
                             &.lgu-home {
                                 .thumb-wrap {
                                     width: 535px;
                                     height: 250px;
+                                    @include tablet {
+                                        width: 401px;
+                                        height: 187.5px;
+                                    }
                                 }
                             }
                             &.kt {
                                 .thumb-wrap {
                                     width: 430px;
                                     height: 350px;
+                                    @include tablet {
+                                        width: 322.5px;
+                                        height: 262.5px;
+                                    }
                                 }
                             }
                             &.commerce-m {
                                 .thumb-wrap {
                                     width: 280px;
                                     height: 425px;
+                                    @include tablet {
+                                        width: 210px;
+                                        height: 319px;
+                                    }
                                 }
                             }
                             &.commerce-tv {
                                 .thumb-wrap {
                                     width: 650px;
                                     height: 310px;
+                                    @include tablet {
+                                        width: 487.5px;
+                                        height: 232.5px;
+                                    }
                                     img {
                                         object-position:top ;
                                     }
@@ -438,6 +481,9 @@ section {
                         position: relative;
                         width: 55vw;
                         padding-left: 13vw;
+                        @include tablet {
+                            width: 110vw;
+                        }
                         h2 {
                             font-size: 10rem;
                         }
@@ -452,6 +498,9 @@ section {
                             right: 16vw;
                             width: 216px;
                             height: 216px;
+                            @include tablet {
+                                right: 40vw;
+                            }
                             &:hover {
                                 &::after {
                                     opacity: 0;
@@ -539,16 +588,25 @@ section {
                 height: 255px;
                 background-color: $color-base-black;
                 z-index: 99;
+                @include tablet {
+                    height: 230px;
+                }
                 h2 {
                     font-family: $font-Bold;
                     font-size: 10vw;
                     padding-top: 100px;
                     padding-left: 2vw;
+                    @include tablet {
+                        font-size: 11vw;
+                    }
                 }
             }
             .works-card {
                 position: sticky;
                 top: 255px;
+                @include tablet {
+                    top: 230px;
+                }
                 .works-title {
                     display: flex;
                     justify-content: space-between;
@@ -611,6 +669,9 @@ section {
                             -webkit-backdrop-filter: blur(10px);
                                 .thumb-video {
                                     height: 10vw;
+                                    @include tablet {
+                                        height: 17vw;
+                                    }
                                 }
                             p {
                                 font-family: $font-Pretendard-ExtraLight;
@@ -647,7 +708,14 @@ section {
         padding-top: 180px;
         padding-bottom: 220px;
         padding-left: 5vw;
+        @include tablet {
+            display: block;
+            padding-left: 0;
+        }
         .title-wrap {
+            @include tablet {
+                padding-left: 5vw;
+            }
             h2 {
                 font-size: 3rem;
             }
@@ -668,6 +736,9 @@ section {
         }
         .learning-list {
             width: 55vw;
+            @include tablet {
+                width: 100%;
+            }
             .list {
                 margin-top: 75px;
                 li {

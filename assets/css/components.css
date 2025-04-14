@@ -68,8 +68,18 @@ header .header-wrap {
 header .header-wrap h1, header .header-wrap p, header .header-wrap a {
   font-size: 1.5rem;
 }
+@media (max-width: 1023px) {
+  header .header-wrap h1, header .header-wrap p, header .header-wrap a {
+    font-size: 1.3rem;
+  }
+}
 header .header-wrap h1 {
   line-height: 20px;
+}
+@media (max-width: 1023px) {
+  header .header-wrap h1 {
+    line-height: 18px;
+  }
 }
 header .header-wrap p, header .header-wrap a {
   font-family: "Geist-ExtraLight";
@@ -156,6 +166,13 @@ header .header-wrap .time {
   justify-content: space-between;
   align-items: end;
   padding-top: 5vw;
+}
+@media (max-width: 1023px) {
+  .footer .footer-wrap .contents-wrap {
+    flex-direction: column;
+    align-items: start;
+    gap: 16vh;
+  }
 }
 .footer .footer-wrap .contents-wrap .desc p {
   font-family: "Pretendard-ExtraLight";
